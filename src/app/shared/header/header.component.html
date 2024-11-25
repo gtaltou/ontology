@@ -1,0 +1,18 @@
+<div class="header">
+  <mat-form-field>
+    <mat-select [(ngModel)]="selectedTenant">
+      <mat-option *ngFor="let tenant of tenants" [value]="tenant.id">
+        {{ tenant.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [(ngModel)]="selectedProfile">
+      <mat-option *ngFor="let profile of profiles" [value]="profile">
+        {{ profile }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+

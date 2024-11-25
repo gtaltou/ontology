@@ -1,0 +1,23 @@
+<h2>Import de vocabulaire(s) dans le schéma</h2>
+<div class="drag-drop-container">
+  <input
+    type="file"
+    (change)="onFileSelected($event)"
+    accept=".csv"
+    id="fileInput"
+    hidden
+  />
+  <label for="fileInput" class="drag-drop-box">
+    <p>Faites glisser un fichier ici ou cliquez pour sélectionner un fichier</p>
+    <p>Le fichier d’import doit être au format csv, encodé en UTF8, avec séparateur de point virgule</p>
+  </label>
+</div>
+
+<div class="actions">
+  <button mat-button color="primary" (click)="onImport()" [disabled]="!selectedFile || isLoading">
+    Importer
+  </button>
+  <button mat-button (click)="onCancel()">Annuler</button>
+</div>
+
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>

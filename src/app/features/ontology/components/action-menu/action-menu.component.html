@@ -1,0 +1,7 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="openOntologyDialog()">Importer l'ontologie</button>
+  <button mat-menu-item (click)="openPathDialog()">Importer des chemins</button>
+</mat-menu>
